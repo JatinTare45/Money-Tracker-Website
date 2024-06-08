@@ -9,7 +9,8 @@ app.use(bodyParser.urlencoded({
     extended:true
 }))
 
-mongoose.connect('mongodb://localhost:27017/MoneyTrackerList')
+//Use your MongoDB url to connect to your MongoDB Database.
+mongoose.connect('MONGODB_URL')
 var db= mongoose.connection
 db.on('error', ()=> console.log("Error in connection with DB"))
 db.once('open', ()=> console.log("Connected to DB"))
